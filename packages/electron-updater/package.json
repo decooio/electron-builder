@@ -1,9 +1,8 @@
 {
-  "name": "electron-updater",
-  "version": "4.4.3",
+  "name": "@decooio/electron-updater",
+  "version": "0.0.1",
   "description": "Cross platform updater for electron applications",
   "main": "out/main.js",
-  "author": "Vladimir Krivosheev",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -33,6 +32,8 @@
   },
   "typings": "./out/main.d.ts",
   "publishConfig": {
-    "tag": "next"
+    "tag": "next",
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

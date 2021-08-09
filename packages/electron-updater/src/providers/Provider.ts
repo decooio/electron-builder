@@ -31,8 +31,12 @@ export abstract class Provider<T extends UpdateInfo> {
       const arch = process.env.TEST_UPDATER_ARCH || process.arch
       const archSuffix = arch === "x64" ? "" : `-${arch}`
       return "-linux" + archSuffix
+    } else if (this.runtimeOptions.platform === "darwin") {
+      return "-mac"
     } else {
-      return this.runtimeOptions.platform === "darwin" ? "-mac" : ""
+      const arch = process.env.TEST_UPDATER_ARCH || process.arch
+      const is32 = arch === "ia32" || arch === "x32"
+      return is32 ? "-win32" : ""
     }
   }
 

@@ -1,6 +1,7 @@
 /.vscode/
 node_modules
 *.log
+.npmrc
 
 /.idea/compiler.xml
 /.idea/encodings.xml
